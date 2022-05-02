@@ -4,14 +4,7 @@
 
 name: Deploy
 
-on:
-  push:
-    tags:
-      - '*'
-    paths-ignore:
-      - '**.md'  # All markdown files in the repository
-  release:
-    types: [released]
+on: [push]
 
 jobs:
   deploy:
