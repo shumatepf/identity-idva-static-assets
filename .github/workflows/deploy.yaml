@@ -6,8 +6,6 @@ name: Deploy
 
 on:
   push:
-    branches:
-      - main
     tags:
       - '*'
     paths-ignore:
@@ -17,7 +15,6 @@ on:
 
 jobs:
   deploy:
-    if: github.repository_owner == 'GSA-TTS'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
